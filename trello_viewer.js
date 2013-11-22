@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name       Better Viewer for Trello
 // @namespace  http://weibo.com/gsavl
-// @version    0.1.2
+// @version    0.1.3
 // @description  better trello userage
 // @match      https://trello.com/*
 // @noframes
@@ -25,8 +25,11 @@ var w_left = tw * (1 - pet) / 2;
 var w_main_width = tw * pet - 250;
 
 setInterval(function() {
+    if (location.pathname === '/') {
+        return;
+    }
     /*jshint multistr: true */
-    if ($('#css-tm').length === 0 && location.pathname !== '/') {
+    if ($('#css-tm').length === 0 && (location.pathname.indexOf('/b/') === 0 || location.pathname.indexOf('/c/') === 0)) {
         var css_script = $('<style/>', {
             'type': 'text/css',
             'id': 'css-tm',
@@ -43,4 +46,5 @@ setInterval(function() {
 
 /*
  * 2013-11-21 10:03:00  the updated css will not effect trello index page
+ * 2013-11-22 17:38:00  the updated css will not effect trello borad page
  */
