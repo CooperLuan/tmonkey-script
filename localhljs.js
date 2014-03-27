@@ -31,4 +31,5 @@ setTimeout(function() {
     $('pre').each(function(i, e) {
         hljs.highlightBlock(e);
     });
+    $('pre').css('font-size', '14px');
 }, 500);
