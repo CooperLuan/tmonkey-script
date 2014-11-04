@@ -16,6 +16,8 @@ function adjust_main() {
     } else {
         $('#js-repo-pjax-container').css('width', '97%');
     }
+    $('.discussion-timeline').css('width', '89%');
+    $('.timeline-new-comment').css('max-width', '100%');
 };
 adjust_main();
 
