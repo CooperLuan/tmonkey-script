@@ -8,7 +8,8 @@
 
 $('.header .container').css('width', '90%');
 $('.pagehead .container').css('width', '90%');
-$($('.site .container')[1]).css('width', '90%');
+$($('.main-content .container')[1]).css('width', '90%');
+$("#js-pjax-container .container").css('width', '90%');
 
 function adjust_main() {
     if ($('.repository-with-sidebar').hasClass('with-full-navigation') === true) {
